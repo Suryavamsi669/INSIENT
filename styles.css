@@ -178,6 +178,12 @@ footer {
         padding: 0; /* Remove padding */
     }
 }
+@media only screen and (max-width: 600px) {
+    body {
+        width: 1024px; /* Set a fixed width */
+        overflow-x: auto; /* Allow horizontal scrolling */
+    }
+}
 
 
 @media (min-width: 769px) and (max-width: 1024px) {
