@@ -228,7 +228,7 @@
         <div class="modal-content">
             <span class="close">&times;</span>
             <h2>Get In Touch</h2>
-            <form action="your-form-action" method="post">
+            <form action="your-backend-script-url" method="POST">
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" required>
 
@@ -244,7 +244,7 @@
     </div>
 
     <script>
-        // Modal script
+        // Modal logic
         var modal = document.getElementById("myModal");
         var btn = document.getElementById("openModal");
         var span = document.getElementsByClassName("close")[0];
@@ -263,27 +263,26 @@
             }
         }
 
-        // Image slider script
-        let slideIndex = 1;
-        let slides = document.getElementsByClassName("slides");
+        // Image slider logic
+        var currentSlide = 0;
+        var slides = document.getElementsByClassName("slides");
 
-        function moveSlide(n) {
-            slideIndex += n;
-            if (slideIndex < 1) {slideIndex = slides.length;}
-            if (slideIndex > slides.length) {slideIndex = 1;}
-            showSlides();
-        }
-
-        function showSlides() {
-            for (let i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";  
+        function showSlide(n) {
+            for (var i = 0; i < slides.length; i++) {
+                slides[i].classList.remove("active");
             }
-            slides[slideIndex - 1].style.display = "block";
+            slides[n].classList.add("active");
         }
 
-        setInterval(() => moveSlide(1), 5000); // Auto-slide every 5 seconds
-        showSlides(); // Initialize slides
+        function moveSlide(step) {
+            currentSlide += step;
+            if (currentSlide >= slides.length) {
+                currentSlide = 0;
+            } else if (currentSlide < 0) {
+                currentSlide = slides.length - 1;
+            }
+            showSlide(currentSlide);
+        }
     </script>
-
 </body>
 </html>
