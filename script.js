@@ -21,3 +21,22 @@ function moveSlide(direction) {
 
 // Initial call to display the first slide
 showSlide(currentSlide);
+        // Automatically show the first slide
+        showSlides();
+
+        // Function to change slides
+        function moveSlide(n) {
+            slideIndex += n;
+            if (slideIndex < 0) { slideIndex = slides.length - 1; } // Loop back to last slide
+            if (slideIndex >= slides.length) { slideIndex = 0; } // Loop back to first slide
+            showSlides();
+        }
+
+        // Optional: Auto-slide functionality
+        setInterval(() => {
+            moveSlide(1);
+        }, 5000); // Change slide every 5 seconds
+    </script>
+</body>
+</html>
+
