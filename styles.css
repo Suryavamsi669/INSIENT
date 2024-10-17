@@ -134,6 +134,10 @@ footer {
     margin-bottom: 40px;
     color: #333;
 }
+.desktop-view {
+    width: 1024px; /* Fixed width for desktop */
+    overflow-x: auto; /* Allow horizontal scrolling */
+}
 
 .grid-container {
     display: grid;
