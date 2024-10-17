@@ -168,11 +168,17 @@ footer {
 }
 
 /* Media query for smaller screens */
-@media (max-width: 768px) {
-    .grid-container {
-        grid-template-columns: 1fr; /* Single column for small screens */
+@media (max-width: 600px) {
+    .hero {
+        padding: 30px 10px; /* Less padding on small screens */
+    }
+
+    nav ul {
+        flex-direction: column; /* Stack menu items vertically */
+        padding: 0; /* Remove padding */
     }
 }
+
 
 @media (min-width: 769px) and (max-width: 1024px) {
     .grid-container {
