@@ -1,0 +1,328 @@
+/* General Body and Footer Styling */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure body covers the full viewport height */
+    margin: 0;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+    margin-top: auto; /* Pushes footer to the bottom */
+    font-size: 14px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.hero {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.cta-btn {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.image-slider {
+    position: relative;
+    max-width: 800px;
+    margin: 20px auto;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centering images and text */
+}
+
+.small-image {
+    width: 50%; /* Adjust this size for smaller or larger images */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.image-description {
+    margin-top: 10px;
+    font-size: 16px; /* Adjust font size */
+    color: #333; /* Text color */
+    padding: 0 20px; /* Add some padding for better text visibility */
+    text-align: center; /* Center the text */
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.left-arrow {
+    left: 10px;
+}
+
+.right-arrow {
+    right: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+/* Why Us Section Styling */
+.why-us-section {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+/* Why Us Section Styling */
+.why-us-section {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.why-us-section h1 {
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Four columns for the grid */
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.grid-item {
+    background-color: #e0e0e0; /* Light grey background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.grid-image {
+    width: 100px; /* Image size */
+    height: 100px;
+    object-fit: cover; /* Adjusts image without distortion */
+    margin-bottom: 15px;
+}
+
+.grid-item h3 {
+    margin-top: 0;
+    color: #333;
+}
+
+.grid-item p {
+    color: #555;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr; /* Single column for small screens */
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .grid-container {
+        grid-template-columns: 1fr 1fr; /* Two columns for medium screens */
+    }
+}
+/* What We Do Section Styling */
+.what-we-do-section {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.what-we-do-section h1 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.intro-text {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 40px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.centered-image {
+    width: 400px; /* Adjust image size as needed */
+    height: auto;
+    border-radius: 10px;
+}
+/* Team Section Styling */
+.team-section {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.team-section h1 {
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.team-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: nowrap; /* Prevents wrapping */
+    overflow-x: auto; /* Adds horizontal scrolling if necessary */
+}
+
+.team-member {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    width: 23%; /* Keep fixed width for the team members */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    flex-shrink: 0; /* Prevent shrinking in a smaller space */
+}
+
+.team-member:hover {
+    transform: translateY(-10px);
+}
+
+.image-box {
+    border: 2px solid #333; /* Image border */
+    border-radius: 10px;
+    padding: 5px;
+    margin-bottom: 15px;
+}
+
+.image-box img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.team-member h3 {
+    margin: 10px 0 5px;
+    font-size: 20px;
+    color: #333;
+}
+
+.team-member p {
+    font-size: 16px;
+    color: #666;
+}
+/* Service Models Page Specific Styling */
+.service-model-section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.service-image-container {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.centered-service-image {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid #333;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+/* Contact Page Specific Styles */
+.contact-section {
+    padding: 50px 20px;
+    text-align: left;
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+}
+
+.contact-icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 15px;
+}
+
+.contact-item p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+}
+
+.contact-item a {
+    color: #0073b1; /* LinkedIn blue */
+    text-decoration: none;
+}
+
+.contact-item a:hover {
+    text-decoration: underline;
+}
